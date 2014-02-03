@@ -1,5 +1,7 @@
 var expect = require('chai').expect;
-var Packet = require('../lib/packet');
+var packet = require('../lib/packet');
+var Packet = packet.Packet;
+var toOctetStringArray = packet.toOctetStringArray;
 
 describe("Packet", function() {
   describe("#new Packet()", function() {
@@ -15,8 +17,18 @@ describe("Packet", function() {
       expect(new Packet(types[5]).type).to.equal("3D Information Data");
     });
 
-    it ("should make sure packet data is being resolved to the correct type", function() {
-      expect(typeof new Packet(types[0]).data).to.equal('string')
+    it("should parse buffers into the correct kind of string", function() {
+      expect(toOctetStringArray(2, new Buffer([15, 89, 254, 14, 37, 89]), null, "BE")).to.have.a.property("length").to.equal(3);
+      expect(toOctetStringArray(4, new Buffer([15, 89, 254, 14]), null, "LE")).to.have.a.property("length").to.equal(1);
+      expect(toOctetStringArray(8, new Buffer([15, 89, 254, 14, 145, 65, 24, 98]), null, "LE")).to.have.a.property("length").to.equal(1);
+      expect(toOctetStringArray(16, new Buffer([15, 89, 254, 14, 145, 65, 24, 98, 15, 89, 254, 14, 145, 65, 24, 98, 15, 89, 254, 14, 145, 65, 24, 98, 15, 89, 254, 14, 145, 65, 24, 98]), null, "LE")).to.have.a.property("length").to.equal(2);
+    });
+
+    it("should make sure packet data is being resolved to the correct type", function() {
+      expect(Array.isArray(new Packet(types[0]).data)).to.equal(true);
+      expect(Array.isArray(new Packet(types[1]).data)).to.equal(true);
+      expect(Array.isArray(new Packet(types[2]).data)).to.equal(false);
+      expect(typeof (new Packet(types[2]).data)).to.equal("number");
     })
   });
 });
