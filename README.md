@@ -22,11 +22,11 @@ var packets = parser.parse(payload);
 // 
 
 console.log(packets.length); // 3
-console.log(packets[0].type // Flags
-console.log(packets[0].data //  [ 'LE Limited Discoverable Mode' ]
+console.log(packets[0].type); // Flags
+console.log(packets[0].data); //  [ 'LE Limited Discoverable Mode' ]
 
-console.log(packets[1].type // 'Incomplete List of 128-bit Service Class UUIDs'
-console.log(packets[1].data // [ '0xba5689a6fabfa2bd01467d6e3858abad' ] 
+console.log(packets[1].type); // 'Incomplete List of 128-bit Service Class UUIDs'
+console.log(packets[1].data); // [ '0xba5689a6fabfa2bd01467d6e3858abad' ] 
 ```
 
 ## Packet Structure

@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var parser = require('../lib/parser');
+var parser = require('../');
 
 describe("Parser", function() {
 
