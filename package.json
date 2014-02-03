@@ -1,6 +1,6 @@
 {
   "name" : "ble-ad-parser",
-  "version": "0.0.2",
+  "version": "0.0.25",
   "description" : "Parse Bluetooth Low Energy peripheral advertising packets",
   "keywords" : ["bluetooth", "low", "energy", "packet", "advertise", "parse"],
   "main" : "index.js",
@@ -8,5 +8,12 @@
   {
     "mocha" : "*",
     "chai" : "*"
+  },
+  "author": "Jon McKay <jon@technical.io>",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "directories": {
+    "lib": "libraries",
+    "test" : "Testing"
   }
 }
