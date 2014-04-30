@@ -1,6 +1,6 @@
 {
   "name" : "ble-ad-parser",
-  "version": "0.0.4",
+  "version": "0.0.41",
   "description" : "Parse Bluetooth Low Energy peripheral advertising packets",
   "keywords" : ["bluetooth", "low", "energy", "packet", "advertise", "parse"],
   "main" : "index.js",
