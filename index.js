@@ -8,10 +8,12 @@
 // except according to those terms.
 
 var PacketParser = require('./lib/parser');
+var PacketBuilder = require('./lib/serializer');
 
 module.exports.parse = PacketParser.parse;
 module.exports.parseLE = PacketParser.parseLE;
 module.exports.parseBE = PacketParser.parseBE;
+module.exports.serialize = PacketBuilder.serialize;
 
 // For testing only
 module.exports.split = PacketParser.split;
