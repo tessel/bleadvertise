@@ -54,19 +54,22 @@ parse.parseBE(buffer);
 ```
 var parser = require('ble-ad-parser');
 
+// Create your advertisement packet
 var packet = {
 	flags : [0x02, 0x04],
 	incompleteUUID16 : ['2A00','2A01'],
+	incompleteUUID128 : ['ba5689a6fabfa2bd01467d6e3858abad'],
 	completeName : 'My Device'
 };
 
+// Serialize it into a Buffer
 var payload = parser.serialize(packet);
 
 console.log(payload);
-// <Buffer 02 01 06 05 02 00 2a 01 2a 0a 09 4d 79 20 44 65 76 69 63 65>
+// <<Buffer 02 01 06 05 02 00 2a 01 2a 11 06 ad ab 58 38 6e 7d 46 01 bd a2 bf fa a6 89 56 ba 0a 09 4d 79 20 44 65 76 69 63 65>
 ```
 
-You can create an advertisment packet buffer from an object having the following keys:
+You can create an advertisment packet buffer from an object with the following keys and their corresponding data types:
 
 *flags* - An array of integers
 
@@ -124,9 +127,9 @@ You can create an advertisment packet buffer from an object having the following
 
 *pairingRandomizerR256* - An array of hex strings
 
-*serviceUUID32* - An array of hex strings
+*serviceUUID32* - An array of 32 bit UUID hex strings
 
-*serviceUUID128* - An array of hex strings
+*serviceUUID128* - An array of 128 bit UUID hex strings
 
 *_3dInfo* - An array of bytes or Buffer
 
