@@ -69,36 +69,67 @@ console.log(payload);
 You can create an advertisment packet buffer from an object having the following keys:
 
 *flags* - An array of integers
+
 *incompleteUUID16* - An array of 16 bit UUID hex strings
+
 *completeUUID16* - An array of 16 bit UUID hex strings
+
 *incompleteUUID32* - An array of 32 bit UUID hex strings
+
 *completeUUID32* - An array of 32 bit UUID hex strings
+
 *incompleteUUID128* - An array of 128 bit UUID hex strings
+
 *completeUUID128* - An array of 128 bit UUID hex strings
+
 *shortName* - A string
+
 *completeName* - A string
+
 *txPower* - An integer value
+
 *deviceClass* - A hex string
+
 *pairingHashC* - A hex string
+
 *pairingRandomizerR* - A hex string
+
 *deviceId* - A hex string
+
 *smOOBFlags* - A hex string
+
 *intervalRange* - An array of hex strings
+
 *solicitationUUID16* - An array of 16 bit UUID hex strings
+
 *solicitationUUID32* - An array of 16 bit UUID hex strings
+
 *solicitationUUID128* - An array of 16 bit UUID hex strings
+
 *serviceData* - An array of hex strings
+
 *publicAddress* - An array of hex strings
+
 *randomAddress* - An array of hex strings
+
 *appearance* - An array of bytes
+
 *interval* - An array of hex strings
+
 *deviceAddress* - An array of hex strings
+
 *role* - An array of bytes or Buffer
+
 *pairingHashC256* - An array of hex strings
+
 *pairingRandomizerR256* - An array of hex strings
+
 *serviceUUID32* - An array of hex strings
+
 *serviceUUID128* - An array of hex strings
+
 *_3dInfo* - An array of bytes or Buffer
+
 *mfrData* - An array of bytes of Buffer
 
 ## License
