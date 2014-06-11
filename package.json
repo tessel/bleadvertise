@@ -1,15 +1,15 @@
 {
-  "name" : "ble-ad-parser",
-  "version": "0.0.5",
-  "description" : "Parse Bluetooth Low Energy peripheral advertising packets",
-  "keywords" : ["bluetooth", "low", "energy", "packet", "advertise", "parse"],
+  "name" : "bleadvertise",
+  "version": "0.1.0",
+  "description" : "Parse and generate Bluetooth Low Energy peripheral advertising packets",
+  "keywords" : ["bluetooth", "low", "energy", "packet", "advertise", "parse", "generate"],
   "main" : "index.js",
   "devDependencies" :
   {
     "mocha" : "*",
     "chai" : "*"
   },
-  "author": "Jon McKay <jon@technical.io>",
+  "author": "Technical Machine <team@technical.io>",
   "license": "MIT",
   "readmeFilename": "README.md",
   "directories": {

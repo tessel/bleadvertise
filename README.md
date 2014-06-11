@@ -1,10 +1,10 @@
 # ble-ad-parser
 
 ## Description
-This package will parse BLE slave advertisement packets into human readable/manipulatable objects and build advertisement packets from JSON objects. Based off of the BLE specification [data types](https://www.bluetooth.org/en-us/specification/assigned-numbers/generic-access-profile).
+This package can parse BLE slave advertisement packets into human readable/manipulatable objects and build advertisement packets from JSON objects. Based off of the BLE specification [data types](https://www.bluetooth.org/en-us/specification/assigned-numbers/generic-access-profile).
 ## Install
 ```
-npm install ble-ad-parser
+npm install bleadvertise
 ```
 
 ## Usage
