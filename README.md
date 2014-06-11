@@ -11,7 +11,7 @@ npm install bleadvertise
 
 ### Packet Parsing
 
-```
+```.js
 var parser = require('ble-ad-parser');
 
 // Payload from your BLE device (make it into a buffer, if not already)
@@ -45,13 +45,13 @@ The returned packets in the packet array have the following structure:
 ### Endianness
 
 You can specify the endianess that you want the buffers parsed with by using these functions:
-```
+```.js
 parser.parseLE(buffer);
 parse.parseBE(buffer);
 ```
 
 ### Building Packets
-```
+```.js
 var parser = require('ble-ad-parser');
 
 // Create your advertisement packet
