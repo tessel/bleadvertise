@@ -21,14 +21,14 @@ var payload = new Buffer([27, 2, 1, 6, 17, 6, 186, 86, 137, 166, 250, 191, 162, 
 // Parse (little-endian by default)
 var packets = parser.parse(payload);
 
-// 
+//
 
 console.log(packets.length); // 3
 console.log(packets[0].type); // Flags
 console.log(packets[0].data); //  [ 'LE Limited Discoverable Mode' ]
 
 console.log(packets[1].type); // 'Incomplete List of 128-bit Service Class UUIDs'
-console.log(packets[1].data); // [ '0xba5689a6fabfa2bd01467d6e3858abad' ] 
+console.log(packets[1].data); // [ '0xba5689a6fabfa2bd01467d6e3858abad' ]
 ```
 
 ### Packet Structure
@@ -58,7 +58,6 @@ var parser = require('ble-ad-parser');
 var packet = {
 	flags : [0x02, 0x04],
 	incompleteUUID16 : ['2A00','2A01'],
-	incompleteUUID128 : ['ba5689a6fabfa2bd01467d6e3858abad'],
 	completeName : 'My Device'
 };
 
@@ -66,10 +65,10 @@ var packet = {
 var payload = parser.serialize(packet);
 
 console.log(payload);
-// <<Buffer 02 01 06 05 02 00 2a 01 2a 11 06 ad ab 58 38 6e 7d 46 01 bd a2 bf fa a6 89 56 ba 0a 09 4d 79 20 44 65 76 69 63 65>
+// <Buffer 02 01 06 05 02 00 2a 01 2a 0a 09 4d 79 20 44 65 76 69 63 65>
 ```
 
-You can create an advertisment packet buffer from an object with the following keys and their corresponding data types:
+You can create an advertisement packet buffer from an object with the following keys and their corresponding data types:
 
 *flags* - An array of integers
 
@@ -137,10 +136,3 @@ You can create an advertisment packet buffer from an object with the following k
 
 ## License
 MIT
-
-
-
-
-
-
-
