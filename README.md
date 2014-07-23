@@ -21,8 +21,6 @@ var payload = new Buffer([27, 2, 1, 6, 17, 6, 186, 86, 137, 166, 250, 191, 162, 
 // Parse (little-endian by default)
 var packets = parser.parse(payload);
 
-//
-
 console.log(packets.length); // 3
 console.log(packets[0].type); // Flags
 console.log(packets[0].data); //  [ 'LE Limited Discoverable Mode' ]
