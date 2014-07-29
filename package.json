@@ -1,6 +1,6 @@
 {
   "name" : "bleadvertise",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description" : "Parse and generate Bluetooth Low Energy peripheral advertising packets",
   "keywords" : ["bluetooth", "low", "energy", "packet", "advertise", "parse", "generate"],
   "main" : "index.js",
