@@ -12,7 +12,7 @@ npm install bleadvertise
 ### Packet Parsing
 
 ```.js
-var parser = require('ble-ad-parser');
+var parser = require('bleadvertise');
 
 // Payload from your BLE device (make it into a buffer, if not already)
 
@@ -50,7 +50,7 @@ parse.parseBE(buffer);
 
 ### Building Packets
 ```.js
-var parser = require('ble-ad-parser');
+var parser = require('bleadverise');
 
 // Create your advertisement packet
 var packet = {
