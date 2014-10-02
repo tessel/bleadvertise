@@ -50,7 +50,7 @@ parse.parseBE(buffer);
 
 ### Building Packets
 ```.js
-var parser = require('bleadverise');
+var parser = require('bleadvertise');
 
 // Create your advertisement packet
 var packet = {
