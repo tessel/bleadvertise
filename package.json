@@ -4,6 +4,10 @@
   "description" : "Parse and generate Bluetooth Low Energy peripheral advertising packets",
   "keywords" : ["bluetooth", "low", "energy", "packet", "advertise", "parse", "generate"],
   "main" : "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/technicalmachine/bleadvertise.git"
+  },
   "devDependencies" :
   {
     "mocha" : "*",
@@ -11,6 +15,9 @@
   },
   "author": "Technical Machine <team@technical.io>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/technicalmachine/bleadvertise/issues"
+  },
   "readmeFilename": "README.md",
   "directories": {
     "lib": "libraries",
