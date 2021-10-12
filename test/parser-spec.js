@@ -25,6 +25,11 @@ describe("Parser", function() {
         var parsed = parser.parse(testPayload);
         expect(parsed.length).to.equal(3);
     });
+    it ("should fetch the first length octet when noPayloadLength is true", function() {
+        var newPayload = new Buffer([ 2, 1, 6, 3, 2, 160, 255 ]);
+        var parsed = parser.parse(newPayload, null, null, {noPayloadLength: true});
+        expect(parsed.length).to.equal(2);
+    });
     it("should properly parse a payload into the correct kinds of data", function() {
         var parsed = parser.parse(testPayload);
         parsed.forEach(function(packet) {
