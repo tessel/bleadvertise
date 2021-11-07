@@ -18,12 +18,24 @@ describe("Parser", function() {
     it("should split up an advertisement packet into distinct data formats", function() {
       expect(parser.split(testPayload).length).to.equal(3);
     });
+
+    it("should discard the following data assuming them zero-padding when the leading-length octet of AD structure was 0x00.", function() {
+        var newPayload = Buffer.from(testPayload);
+        // Set the length of second AD structure to zero.
+        newPayload[4] = 0x00;
+        expect(parser.split(newPayload).length).to.equal(1);
+    });
   });
 
   describe("#parse()", function() {
     it ("should create the correct number of packets", function() {
         var parsed = parser.parse(testPayload);
         expect(parsed.length).to.equal(3);
+    });
+    it ("should parse the entire buffer when noPayloadLength is true, assuming the payload not to have the leading length octet.", function() {
+        var newPayload = new Buffer([ 2, 1, 6, 3, 2, 160, 255 ]);
+        var parsed = parser.parse(newPayload, null, null, {noPayloadLength: true});
+        expect(parsed.length).to.equal(2);
     });
     it("should properly parse a payload into the correct kinds of data", function() {
         var parsed = parser.parse(testPayload);
